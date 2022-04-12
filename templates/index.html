@@ -1,0 +1,36 @@
+{% extends "page-template.html" %}
+
+{% block title %} Регистрация {% endblock %}
+
+{% block content %}
+    <form action="{{ url_for('index')}}", method="POST">
+        <h1>Регистрация</h1>
+        <div class="input_of_form">
+            {{form.username(class_='form-control',  placeholder="Имя", autocomplete="off",  autofocus="true")}}
+            <ul>
+                {% for error in form.username.errors %}
+                    <li>{{error}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="input_of_form">
+            {{form.password(class_='form-control',  placeholder="Пароль")}}
+            <ul>
+                {% for error in form.password.errors %}
+                    <li>{{error}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="input_of_form">
+            {{form.confirm_password(class_='form-control',  placeholder="Подтверждение пароля")}}
+            <ul>
+                {% for error in form.confirm_password.errors %}
+                    <li>{{error}}</li>
+                {% endfor %}
+            </ul>
+        </div >
+        <input type="submit" class="submit_log" value="Подтвердить регистрацию">
+        <a href="{{url_for('login')}}">У меня уже есть аккаунт</a>
+        {{ form.csrf_token }}
+    </form>
+{% endblock %}

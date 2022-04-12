@@ -1,0 +1,29 @@
+{% extends "page-template.html" %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+<form action="{{url_for('login')}}", method="post">
+    <h1>Вход</h1>
+    <div class="input_of_form">
+        {{form.username_enter(class_='form-control', autofocus="true",autocomplete="off", placeholder="Имя пользователя")}}
+        <ul>
+            {% for error in form.username_enter.errors %}
+                <li>{{error}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="input_of_form">
+        {{form.password_enter(class="form-control", placeholder="Введите Пароль")}}
+        <ul>
+            {% for error in form.password_enter.errors %}
+                <li>{{error}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <input type="submit" class="submit_log" value="Войти">
+    <a href="{{url_for('index')}}">У меня нет аккаута. Зарегистрироваться</a>
+    {{ form.csrf_token }}
+</form>
+
+{% endblock %}

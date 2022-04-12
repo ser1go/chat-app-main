@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="/static/img/icon-2967797_1280.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header><div class="logo"><i id="icon" class="fa fa-commenting" aria-hidden="true"></i><h1>RSSU MESSENGER</h1></div></header>
+     <!--Код с отображение Flash уведомлений-->
+     {% with messages = get_flashed_messages(with_categories=true) %}
+     {% if messages %}
+
+         <div id="err" class="alert alert-{{ messages[0][0] }} " role="alert">
+             {{messages[0][1]}}
+         </div>
+     {% endif %}
+ {% endwith %}
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
+    <title>Мессенджер</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="/static/img/icon-2967797_1280.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта с лого и названием -->
+    <header><div class="logo"><i id="icon" class="fa fa-commenting" aria-hidden="true"></i><h1>RSSU MESSENGER</h1></div><a id="logout_button" href="{{ url_for('logout') }}">Выход</a></header>
+    <!-- Центральный блок контента -->
+    <div class="content_chat">
+        <!-- Блок Мессенджера -->
+        <div class="messanger_window">
+            <!-- Боковое меню навигации -->
+            <nav id="nav-menu">
+                <h1 class="username_show">Приветствуем, {{username}}</h1>
+                <h4>Чаты</h4>
+                <div class="rooms">
+                    {% for room in rooms %}
+                        <p id="select-room">{{room|title}}</p>
+                    {% endfor %}
+                </div>
+            </nav>
+            <!-- Блок, содержащие всю праволежащую часть основного контента(окно чата и поле ввода сообщения с отправкой) -->
+            <div class="rightside_messanger">
+                <!-- Окно диалога  -->
+                <div id="message_window">
+
+                </div>
+                <!-- Блок ввода сообщения -->
+                <div class="text_typing">
+                    <input type="text" id="user_message" placeholder="Введите сообщение..." autocomplete="off" >
+                    <input type="submit" value="Отправить" id="send_message">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Получение username -->
+    <script type="text/javascript">
+        const username = `{{username}}`;
+    </script>
+    <!-- Дополнительный скрипт для страницы чата -->
+    <script src="{{url_for('static', filename='scripts/chat_page.js')}}"></script>
+    <!-- Код JS SocketIO -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+
+    <script src="{{url_for('static', filename='scripts/socketio.js')}}">
+        
+    </script>
+</body>
+</html>

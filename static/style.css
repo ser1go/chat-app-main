@@ -1,0 +1,221 @@
+/* Общая стилизация для всех страниц в качестве шаблона */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+li {
+    list-style: none;
+    font-size: 1.1em;
+    color: red;
+}
+
+a{
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+
+header{
+    display: flex;
+    width: 100%;
+    min-height: 193px;
+    height: 20vh;
+    background-color: #05445E;
+}
+
+.logo {
+    color: #D4F1F4;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100%;
+    align-items: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-left: 25px;
+}
+.logo>h1{
+    margin-left: 15px;
+}
+#icon {
+    font-size: 2em;
+}
+.content{
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    min-height: 80vh;
+    background-image: url(/static/img/1623664664.21.\ Горы.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    width: 700px;
+    height: 600px;
+    color:white;
+    border-radius: 15px;
+    background-color: #189AB4;
+}
+
+form > h1{
+    margin-top: 40px;
+}
+
+.form-control {
+    margin-top: 45px;
+    width: 350px;
+    font-size: 1.2em;
+    border-color: #05445E;
+    border-width: 1px;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.submit_log{
+    margin-top: 100px;  
+    color: white;
+    border-width: 0px;
+    font-weight: 500;
+    font-size: 1.2em;
+    width: 270px;
+    height: 50px;
+    background-color: #05445E;
+    border-radius: 15px;
+}
+.pass{
+    background-color: black;
+}
+
+/* Стилизация страницы чата */
+
+#nav-menu{
+    display: flex;
+    width: 25%;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+    border-top-left-radius: 12px;
+}
+.rightside_messanger{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    border-radius: 0 12px 12px 0;
+    height: 100%;
+    background-color: #05445E;
+}
+.content_chat{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh;
+    background-image: url(/static/img/1623664664.21.\ Горы.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.messanger_window{
+    display: flex;
+    margin-top: 10px;
+    border-radius: 12px;
+    width: 1200px;
+    height: 75vh;
+    background: #D4F1F4;
+}
+#message_window{
+    width: 100%;
+    border-radius: 0 12px 0 0;
+    height: 90%;
+    background: url(/static/img/blogs_default.jpg);
+    overflow-y: auto;
+}
+
+.text_typing{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 10%;
+    background-color: white;
+    border-bottom-right-radius: 12px;
+}
+#user_message{
+    height: 80%;
+    margin-left: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 1px solid grey;
+    padding-left: 10px;
+    width: 85%;
+}
+#send_message{
+    width: 10%;
+    height: 80%;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.rooms{
+    width: 100%;
+    background-color:#189AB4;
+}
+#select-room{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    font-size: 1.1em;
+    justify-content: center;
+    border-top: 0.5px solid #05445E;
+    transition: 0.8s;
+}
+#select-room:hover{
+    background-color:aqua;
+    transition: 0.8s;
+}
+.username_show{
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+h4{
+    margin-top: 45px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+/* Кастомизация флэш уведомлений */
+#err{
+    text-align: center;
+    background-color: rgb(16, 145, 16);
+    height: 25px;
+}
+/* Кастомизация собственных сообщений */
+.my-msg{
+    height: 100px;
+    font-size: 1.1em;
+    background-color: aqua;
+    width: 60%;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 25px 25px 25px 25px ;
+    word-break: break-all;
+}
+/* Кастомизация системных сообщений */
+.sys-msg{
+    font-size: 1.1em;
+    padding: 15px;
+    color: black;
+    background: rgba(128, 128, 128, 0.479);
+}
+.my-username{
+    font-size: 1.1em;
+    font-style: italic;
+}
+.timestamp{
+    font-size: 1.1em;
+    font-style: italic;
+}
