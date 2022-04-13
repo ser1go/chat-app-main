@@ -128,6 +128,8 @@ form > h1{
     background: #D4F1F4;
 }
 #message_window{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     border-radius: 0 12px 0 0;
     height: 90%;
@@ -197,12 +199,21 @@ h4{
 .my-msg{
     height: 100px;
     font-size: 1.1em;
-    background-color: aqua;
+    background-color:#d4f1f4c9;
     width: 60%;
     padding: 15px;
     margin: 15px;
     border-radius: 25px 25px 25px 25px ;
     word-break: break-all;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.my-username{
+    font-size: 1.1em;
+    font-style: italic;
+}
+.timestamp{
+    font-size: 1.1em;
+    font-style: italic;   
 }
 /* Кастомизация системных сообщений */
 .sys-msg{
@@ -211,11 +222,25 @@ h4{
     color: black;
     background: rgba(128, 128, 128, 0.479);
 }
-.my-username{
+/* Кастомизация чужих сообщений */
+.others-msg{
+    height: 100px;
     font-size: 1.1em;
-    font-style: italic;
+    background-color:#d4f1f4c9;
+    width: 60%;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 25px 25px 25px 25px ;
+    align-self:flex-end;
+    word-break: break-all;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
-.timestamp{
-    font-size: 1.1em;
-    font-style: italic;
+/* Кнопка выхода */
+#logout_button{
+    display: flex;
+    align-self: center;
+    color: white;
+    font-size: 1.3em;
+    margin-right: 35px;
+    font-weight:800;
 }
