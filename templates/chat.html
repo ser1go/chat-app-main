@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- Шапка сайта с лого и названием -->
-    <header><div class="logo"><i id="icon" class="fa fa-commenting" aria-hidden="true"></i><h1>RSSU MESSENGER</h1></div><a id="logout_button" href="{{ url_for('logout') }}">Выход</a></header>
+    <header><div class="logo"><i id="icon" class="fa fa-commenting" aria-hidden="true"></i><h1>RSSU MESSENGER</h1><i id="menu_button" class="fa fa-bars" aria-hidden="true"></i></div><a id="logout_button" href="{{ url_for('logout') }}">Выход</a></header>
     <!-- Центральный блок контента -->
     <div class="content_chat">
         <!-- Блок Мессенджера -->
@@ -25,7 +25,7 @@
                 <h4>Чаты</h4>
                 <div class="rooms">
                     {% for room in rooms %}
-                        <p id="select-room">{{room|title}}</p>
+                        <p id="{{ room|title }}" class="select-room">{{room|title}}</p>
                     {% endfor %}
                 </div>
             </nav>
@@ -38,7 +38,7 @@
                 <!-- Блок ввода сообщения -->
                 <div class="text_typing">
                     <input type="text" id="user_message" placeholder="Введите сообщение..." autocomplete="off" >
-                    <input type="submit" value="Отправить" id="send_message">
+                    <button type="button"  id="send_message"><i id="send_icon" class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
