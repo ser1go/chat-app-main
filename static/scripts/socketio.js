@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
                     // Имя пользователя
                     span_username.setAttribute("class", "my-username");
-                    span_username.innerText = data.username;
+                    span_username.innerText = "Вы";
 
                     // Модуль со временем сообщения
                     span_timestamp.setAttribute("class", "timestamp");

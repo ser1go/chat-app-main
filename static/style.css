@@ -196,7 +196,7 @@ h4{
 /* Кастомизация флэш уведомлений */
 #err{
     text-align: center;
-    background-color: rgb(16, 145, 16);
+    background-color: rgba(16, 145, 16, 0.432);
     height: 25px;
 }
 /* Кастомизация собственных сообщений */
