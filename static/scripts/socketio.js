@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () =>{
     var socket = io();
 
-    let room = "Общение"
-    joinRoom("Общение");
+    let room = "Клиент"
+    joinRoom("Клиент");
 
     // Отображение сообщений
     socket.on('message',data => {
@@ -85,7 +85,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     function leaveRoom(room){
         socket.emit('leave', {'username': username, 'room': room});
         document.querySelectorAll('.select-room').forEach(p => {
-            p.style.backgroundColor = "#189AB4";
+            p.style.backgroundColor = "white";
+            p.style.color = '#00669b';
         });
     }
     // Присоединиться к чату
@@ -95,7 +96,8 @@ document.addEventListener('DOMContentLoaded', () =>{
         // Автофокус на поле ввода
         document.querySelector('#user_message').focus();
         // Подстветка, в каком чате в данный момент пользователь
-        document.querySelector('#' + CSS.escape(room)).style.backgroundColor = "aqua";
+        document.querySelector('#' + CSS.escape(room)).style.backgroundColor = "#00669b";
+        document.querySelector('#' + CSS.escape(room)).style.color ='white';
     }
     // Скролл чата
     function scrollDownChatWindow(){

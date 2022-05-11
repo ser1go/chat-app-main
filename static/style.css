@@ -22,11 +22,11 @@ header{
     width: 100%;
     min-height: 193px;
     height: 20vh;
-    background-color: #05445E;
+    background-color: white;
 }
 
 .logo {
-    color: #D4F1F4;
+    color: #00669b;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -46,8 +46,9 @@ header{
     justify-content:center;
     width: 100%;
     min-height: 80vh;
-    background-image: url(/static/img/1623664664.21.\ Горы.jpg);
+    background-image: url(/static/img/Горы.jpg);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -58,9 +59,10 @@ form{
     margin-top: 15px;
     width: 700px;
     height: 600px;
-    color:white;
+    border:2px solid #FFCC00;
+    color:#00669b;
     border-radius: 15px;
-    background-color: #189AB4;
+    background-color:rgba(255, 255, 255, 0.87);
 }
 
 form > h1{
@@ -85,7 +87,7 @@ form > h1{
     font-size: 1.2em;
     width: 270px;
     height: 50px;
-    background-color: #05445E;
+    background-color: #00669b;
     border-radius: 15px;
 }
 .pass{
@@ -97,6 +99,7 @@ form > h1{
 #nav-menu{
     display: flex;
     width: 25%;
+    color:#00669b;
     align-items: center;
     flex-direction: column;
     height: 60vh;
@@ -115,7 +118,7 @@ form > h1{
     justify-content: center;
     width: 100%;
     min-height: 80vh;
-    background-image: url(/static/img/1623664664.21.\ Горы.jpg);
+    background-image: url(/static/img/Горы.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -125,7 +128,7 @@ form > h1{
     border-radius: 12px;
     width: 1200px;
     height: 75vh;
-    background: #D4F1F4;
+    background: white;
 }
 #message_window{
     display: flex;
@@ -150,6 +153,7 @@ form > h1{
     margin-left: 10px;
     border-radius: 5px;
     margin-right: 10px;
+    font-size: 1.1em;
     border: 1px solid grey;
     padding-left: 10px;
     width: 85%;
@@ -167,7 +171,7 @@ form > h1{
 /* Поле с комнатами */
 .rooms{
     width: 100%;
-    background-color:#189AB4;
+    background-color:white;
 }
 .select-room{
     display: flex;
@@ -179,7 +183,8 @@ form > h1{
     transition: 0.8s;
 }
 .select-room:hover{
-    background-color:aqua;
+    background-color:#00669b;
+    color:white;
     transition: 0.8s;
 }
 .username_show{
@@ -203,7 +208,7 @@ h4{
 .my-msg{
     height: 100px;
     font-size: 1.1em;
-    background-color:#d4f1f4c9;
+    background-color:rgba(255, 255, 255, 0.9);
     width: 60%;
     padding: 15px;
     margin: 15px;
@@ -230,7 +235,7 @@ h4{
 .others-msg{
     height: 100px;
     font-size: 1.1em;
-    background-color:#d4f1f4c9;
+    background-color:rgba(255, 255, 255, 0.8);
     width: 60%;
     padding: 15px;
     margin: 15px;
@@ -243,7 +248,7 @@ h4{
 #logout_button{
     display: flex;
     align-self: center;
-    color: white;
+    color: #00669b;
     font-size: 1.3em;
     margin-right: 35px;
     font-weight:800;

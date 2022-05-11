@@ -16,7 +16,7 @@ db=SQLAlchemy(app)
 
 #Инициализация Фласк SocketIO
 socketio = SocketIO(app)
-ROOMS=["Общение","Получение Задания","Консультация"]
+ROOMS=["Клиент","Получение Задания","Консультация"]
 #Настройка фласк-логин
 login = LoginManager(app)
 login.init_app(app)
