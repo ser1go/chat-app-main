@@ -24,6 +24,7 @@
                 <h1 class="username_show">Приветствуем, {{username}}</h1>
                 <h4>Чаты</h4>
                 <div class="rooms">
+                    <a class='select-room' href="http://bodrovv-sergeyy.myjino.ru/CRM/main.html">Вернуться к CRM-системе</a>
                     {% for room in rooms %}
                         <p id="{{ room|title }}" class="select-room">{{room|title}}</p>
                     {% endfor %}
